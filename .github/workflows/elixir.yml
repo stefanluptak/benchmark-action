@@ -32,12 +32,12 @@ jobs:
         run: gh pr checkout ${{ github.event.pull_request.number }}
 
       - name: Run
-        run: elixir benchmark.exs > output.txt
+        run: elixir benchmark.exs
 
       - name: Add changes
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: git add output.txt
+        run: git add output.html
 
       - name: Commit changes
         env:
@@ -45,7 +45,7 @@ jobs:
         run: |
           git config --global user.email "sluptak@me.com"
           git config --global user.name "Stefan Luptak"
-          git commit -a -m "Update output.txt"
+          git commit -a -m "Update output.html"
 
       - name: Push changes
         env:
