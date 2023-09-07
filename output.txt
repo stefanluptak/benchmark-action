@@ -1,0 +1,52 @@
+Resolving Hex dependencies...
+Resolution completed in 0.02s
+New:
+  benchee 1.1.0
+  deep_merge 1.0.0
+  statistex 1.0.0
+* Getting benchee (Hex package)
+* Getting deep_merge (Hex package)
+* Getting statistex (Hex package)
+==> deep_merge
+Compiling 2 files (.ex)
+Generated deep_merge app
+==> statistex
+Compiling 3 files (.ex)
+Generated statistex app
+==> benchee
+Compiling 44 files (.ex)
+Generated benchee app
+Operating System: Linux
+CPU Information: Intel(R) Xeon(R) Platinum 8272CL CPU @ 2.60GHz
+Number of Available Cores: 2
+Available memory: 6.77 GB
+Elixir 1.15.5
+Erlang 26.0.2
+
+Benchmark suite executing with the following configuration:
+warmup: 2 s
+time: 10 s
+memory time: 2 s
+reduction time: 0 ns
+parallel: 1
+inputs: none specified
+Estimated total run time: 28 s
+
+Benchmarking flat_map ...
+Benchmarking map.flatten ...
+
+Name                  ips        average  deviation         median         99th %
+flat_map           2.21 K      452.13 μs     ±2.80%      450.81 μs      468.31 μs
+map.flatten        2.17 K      461.38 μs     ±2.74%      459.61 μs      484.48 μs
+
+Comparison: 
+flat_map           2.21 K
+map.flatten        2.17 K - 1.02x slower +9.25 μs
+
+Memory usage statistics:
+
+Name           Memory usage
+flat_map          562.31 KB
+map.flatten       703.13 KB - 1.25x memory usage +140.81 KB
+
+**All measurements for memory usage were the same**
