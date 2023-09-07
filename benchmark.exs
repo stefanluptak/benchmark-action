@@ -1,6 +1,6 @@
 Mix.install([:benchee])
 
-list = Enum.to_list(1..10_000)
+list = Enum.to_list(1..9_000)
 map_fun = fn i -> [i, i * i] end
 
 Benchee.run(
